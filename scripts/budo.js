@@ -15,8 +15,8 @@ function execCmd (cmd) {
 var consts = {
   NAME: 'AFRAME',
   ENTRY: './src/index.js',
-  DIST: 'dist/aframe.js',
-  BUILD: 'build/aframe.js',
+  DIST: 'dist/aframe.',
+  BUILD: 'build/aframe.',
   WATCH: 'examples/**/*',  // Additional files to watch for LiveReload
   PORT: 9000
 };

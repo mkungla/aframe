@@ -7,8 +7,9 @@
   "scripts": {
     "browserify": "browserify src/index.js -s 'AFRAME' -p browserify-derequire",
     "build": "mkdirp build/ && npm run browserify -- --debug -o build/aframe.js",
-    "dev": "npm run build && node ./scripts/budo",
-    "dist": "mkdirp dist/ && npm run browserify -s -- --debug | exorcist dist/aframe.js.map > dist/aframe.js && uglifyjs dist/aframe.js -c warnings=false -m -o dist/aframe.min.js",
+    "budo": "node ./scripts/budo",
+    "dev": "npm-run-all build style:build --parallel budo style:watch",
+    "dist": "mkdirp dist/ && npm run browserify -s -- --debug | exorcist dist/aframe.js.map > dist/aframe.js && uglifyjs dist/aframe.js -c warnings=false -m -o dist/aframe.min.js && npm run style:dist",
     "gh-pages": "npm run ghpages",
     "ghpages": "node ./scripts/gh-pages",
     "lint": "semistandard -v | snazzy",
@@ -21,12 +22,16 @@
     "test:firefox": "karma start ./tests/karma.conf.js --browsers firefox_latest",
     "test:chrome": "karma start ./tests/karma.conf.js --browsers Chrome",
     "test:ci": "TEST_ENV=ci karma start ./tests/karma.conf.js --single-run --browsers firefox_latest",
-    "version": "npm run dist"
+    "version": "npm run dist",
+    "style:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "style:build": "node-sass --output-style expanded -o build/ src/style",
+    "style:dist": "node-sass --output-style nested -o dist/ src/style && npm-run-all style:minify style:autoprefixer",
+    "style:minify": "node-sass --output-style compressed --include-path src/style src/style/aframe.scss dist/aframe.min.css",
+    "style:watch": "node-sass --watch src/style -o build/"
   },
   "repository": "aframevr/aframe",
   "license": "MIT",
   "dependencies": {
-    "browserify-css": "^0.8.2",
     "debug": "^2.2.0",
     "deep-assign": "^2.0.0",
     "document-register-element": "dmarcos/document-register-element#8ccc532b7",
@@ -39,6 +44,7 @@
     "webvr-polyfill": "borismus/webvr-polyfill#f45f87a"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "browserify": "^11.0.1",
     "browserify-derequire": "^0.9.4",
     "budo": "^8.1.0",
@@ -60,7 +66,10 @@
     "mkdirp": "0.5.1",
     "mocha": "^2.3.3",
     "mozilla-download": "^1.0.5",
+    "node-sass": "^3.8.0",
+    "npm-run-all": "^2.3.0",
     "open": "0.0.5",
+    "postcss-cli": "^2.5.2",
     "replace": "^0.3.0",
     "rimraf": "2.5.0",
     "semistandard": "^7.0.2",
@@ -70,11 +79,6 @@
     "uglifyjs": "^2.4.10"
   },
   "link": true,
-  "browserify": {
-    "transform": [
-      "browserify-css"
-    ]
-  },
   "semistandard": {
     "ignore": [
       "build/**",
@@ -93,9 +97,6 @@
     "components",
     "elements"
   ],
-  "browserify-css": {
-    "minify": true
-  },
   "engines": {
     "node": ">= 0.12.7",
     "npm": "^2.12.1"

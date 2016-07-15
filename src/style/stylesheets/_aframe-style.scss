@@ -1,0 +1,203 @@
+html {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+/* In chrome mobile the user agent stylesheet set it to white  */
+:-webkit-full-screen {
+  background-color: transparent;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.a-hidden {
+  display: none !important;
+}
+
+.a-canvas {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+a-assets,
+a-scene video,
+a-scene img,
+a-scene audio {
+  display: none;
+}
+
+.a-enter-vr-modal,
+.a-orientation-modal {
+  font-family: Consolas, Andale Mono, Courier New, monospace;
+}
+
+.a-enter-vr-modal {
+  font-size: 11px;
+  line-height: 15px;
+  min-height: 32px;
+}
+
+.a-enter-vr-modal a {
+  border-bottom: 1px solid $color-white;
+  padding: 2px 0;
+  text-decoration: none;
+  transition: .1s color ease-in;
+}
+
+.a-enter-vr-modal a:hover {
+  background-color: $color-white;
+  color: #111;
+  padding: 2px 4px;
+  position: relative;
+  left: -4px;
+}
+
+.a-enter-vr {
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  bottom: 5px;
+  display: flex;
+  display: -webkit-flex;
+  font-family: sans-serif, monospace;
+  font-size: 13px;
+
+  font-weight: 200;
+  line-height: 16px;
+  height: 72px;
+  position: fixed;
+  right: 5px;
+}
+
+.a-enter-vr-button,
+.a-enter-vr-modal,
+.a-enter-vr-modal a {
+  color: #fff;
+}
+
+.a-enter-vr-button {
+  background: $a-enter-vr-button-bg;
+  background-size: 70% 70%;
+  border: 0;
+  bottom: 0;
+  cursor: pointer;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  transition: background-color .05s ease;
+  -webkit-transition: background-color .05s ease;
+  width: 60px;
+  z-index: 999999;
+}
+
+.a-enter-vr-button:active,
+.a-enter-vr-button:hover {
+  background-color: $a-enter-vr-button-bg-active;
+}
+
+[data-a-enter-vr-no-webvr] .a-enter-vr-button {
+  border-color: $a-enter-vr-button-no-vr-bg;
+  opacity: 0.65;
+}
+
+[data-a-enter-vr-no-webvr] .a-enter-vr-button:active,
+[data-a-enter-vr-no-webvr] .a-enter-vr-button:hover {
+  background-color: $a-enter-vr-button-no-vr-bg-active;
+  cursor: not-allowed;
+}
+
+.a-enter-vr-modal {
+  background-color: $color-gray;
+  border-radius: 0;
+  display: none;
+  min-height: 32px;
+  margin-right: 70px;
+  padding: 9px;
+  width: 280px;
+  position: relative;
+}
+
+.a-enter-vr-modal:after {
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid $color-gray;
+  border-top: 10px solid transparent;
+  display: inline-block;
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 5px;
+  width: 0;
+  height: 0;
+}
+
+.a-enter-vr-modal p,
+.a-enter-vr-modal a {
+  display: inline;
+}
+
+.a-enter-vr-modal p {
+  margin: 0;
+}
+
+.a-enter-vr-modal p:after {
+  content: ' ';
+}
+
+[data-a-enter-vr-no-webvr].a-enter-vr:hover .a-enter-vr-modal,
+[data-a-enter-vr-no-headset].a-enter-vr:hover .a-enter-vr-modal {
+  display: block;
+}
+
+.a-orientation-modal {
+  background: $a-orientation-modal-bg;
+  background-size: 50% 50%;
+  font-size: 14px;
+  font-weight: 600;
+  height: 100%;
+  left: 0;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  
+  &:after {
+    color: $color-gray;
+    content: "Insert phone into Cardboard holder.";
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 70%;
+    transform: translateY(-70%);
+    width: 100%;
+  }
+  
+  button {
+    background:$a-orientation-modal-btn-bg;
+    border: none;
+    height: 50px;
+    text-indent: -9999px;
+    width: 50px;
+  }
+}
+
+
+@media (min-width: 480px) {
+  .a-enter-vr {
+    bottom: 20px;
+    right: 20px;
+  }
+  .a-enter-vr-modal {
+    width: 400px;
+  }
+}
