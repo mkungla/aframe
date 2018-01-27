@@ -1,61 +1,48 @@
-<h1 align="center">A-Frame</h1>
+<!-- travis-ci -->
+[travis-img]: https://img.shields.io/travis/okramlabs/aframe.svg?style=flat-square
+[travis-link]: https://travis-ci.org/okramlabs/aframe
 
-<p align="center"><a href="https://aframe.io" target="_blank"><img width="480" alt="A-Frame" src="https://user-images.githubusercontent.com/674727/32120889-230ef110-bb0f-11e7-908c-76e39aa43149.jpg"></a></p>
+<!-- appveyor -->
+[appveyor-img]: https://ci.appveyor.com/api/projects/status/8w0pjo5xs8n1wap8?svg=true&style=flat-square
+[appveyor-link]: https://ci.appveyor.com/project/okramlabs/aframe
 
-<p align="center"><b>A web framework for building virtual reality experiences.</b></p>
+<!-- circleci -->
+[circleci-img]: https://circleci.com/gh/okramlabs/aframe/tree/master.svg?style=svg&?style=flat-square
+[circleci-link]: https://circleci.com/gh/okramlabs/aframe/tree/master
 
-<p align="center">
-  <a href="https://travis-ci.org/aframevr/aframe"><img src="https://img.shields.io/travis/aframevr/aframe.svg?style=flat-square" alt="Build Status"></a>
-  <a href="https://codecov.io/gh/aframevr/aframe">
-    <img src="https://codecov.io/gh/aframevr/aframe/branch/master/graph/badge.svg" alt="Coverage Status">
-  </a>
-  <a href="https://npmjs.org/package/aframe">
-    <img src="https://img.shields.io/npm/dt/aframe.svg?style=flat-square" alt="Downloads">
-  </a>
-  <a href="https://npmjs.org/package/aframe">
-    <img src="https://img.shields.io/npm/v/aframe.svg?style=flat-square" alt="Version">
-  </a>
-  <a href="https://npmjs.com/package/aframe">
-    <img src="https://img.shields.io/npm/l/aframe.svg?style=flat-square" alt="License"></a>
-  </a>
-</p>
+<!-- CHANGES
+- avoid html in markdown when possible
+- collect links together for easier tracking
+- add some useful badges exposing information what users care
+- add builds for platforms Windows and macOS
+- remove awesome-aframe link
+-->
+[![aframe cover][aframe-cover]][aframe-site-link]
 
-<div align="center">
-  <a href="https://aframe.io">Site</a>
-  &mdash;
-  <a href="https://aframe.io/docs/">Docs</a>
-  &mdash;
-  <a href="https://aframe.io/school/">School</a>
-  &mdash;
-  <a href="https://aframevr-slack.herokuapp.com">Slack</a>
-  &mdash;
-  <a href="https://aframe.io/blog/">Blog</a>
-  &mdash;
-  <a href="https://github.com/aframevr/awesome-aframe">awesome-aframe</a>
-</div>
+# A-Frame
+**A web framework for building virtual reality experiences.**
 
-## Examples
+[Site][aframe-site-link] &mdash;
+[Docs][aframe-docs-link] &mdash;
+[School][aframe-school-link] &mdash;
+[Slack][aframe-slack-link] &mdash;
+[Blog][aframe-blog-link] &mdash;
+[Examples][aframe-examples-link]
 
-<a href="https://aframe.io/a-painter/?url=https://ucarecdn.com/962b242b-87a9-422c-b730-febdc470f203/">
-  <img alt="A-Painter" target="_blank" src="https://cloud.githubusercontent.com/assets/674727/24531388/acfc3dda-156d-11e7-8563-5bd75252f70f.gif" height="190" width="32%">
-</a>
-<a href="https://aframe.io/a-blast/">
-  <img alt="A-Blast" target="_blank" src="https://cloud.githubusercontent.com/assets/674727/24531440/0336e66e-156e-11e7-95c2-f2e6ebc0393d.gif" height="190" width="32%">
-</a>
-<a href="https://aframe.io/a-saturday-night/">
-  <img alt="A-Saturday-Night" target="_blank" src="https://cloud.githubusercontent.com/assets/674727/24531477/44272daa-156e-11e7-8ef9-d750ed430f3a.gif" height="190" width="32%">
-</a>
-<a href="https://ngokevin.github.io/kframe/scenes/aincraft/">
-  <img alt="Aincraft" target="_blank" src="https://cloud.githubusercontent.com/assets/674727/24531777/25b8ff5e-1570-11e7-896c-3446d1419eb8.gif" height="190" width="32%">
-</a>
-<a href="https://github.com/googlecreativelab/webvr-musicalforest">
-  <img alt="Musical Forest by @googlecreativelab" target="_blank" src="https://cloud.githubusercontent.com/assets/674727/25109861/b8e9ec48-2394-11e7-8f2d-ea1cd9df69c8.gif" height="190" width="32%">
-</a>
-<a href="https://aframe-gallery.glitch.me">
-  <img alt="360 Image Gallery" target="_blank" src="https://cloud.githubusercontent.com/assets/674727/24572552/72f81bec-162e-11e7-9851-037d0280abdb.gif" height="190" width="32%">
-</a>
+*Find more examples on [the homepage][aframe-site-link], [A Week of A-Frame][aframe-blog-link][aframe-blog-link].*
 
-*Find more examples on [the homepage](https://aframe.io), [A Week of A-Frame](https://aframe.io/blog/), and [`awesome-aframe`](https://github.com/aframevr/awesome-aframe/).*
+[![A-Frame Latest Version][aframe-version-img]][aframe-version-link]
+[![GitHub license badge][license-img]][license-link]
+[![GitHub issues][github-issues-img]][github-issues-link]
+[![GitHub forks][github-forks-img]][github-forks-link]
+[![GitHub stars][github-stars-img]][github-stars-link]
+[![A-Frame downloads][npm-downloads-img]][npm-downloads-link]
+
+**Development**
+
+| Linux | macOS | Windows | Code Coverage |
+| --- | --- | --- | --- |
+| [![TravisCI Build Status][travis-img]][travis-link] | [![CircleCI Build Status][circleci-img]][circleci-link] | [![AppveyorCI Build Status][appveyor-img]][appveyor-link] | [![Coverage Status][codecov-img]][codecov-link] |
 
 ## Features
 
@@ -116,12 +103,12 @@ multiuser, oceans, mountains, speech recognition, or teleportation!
 Build VR scenes in the browser with just a few lines of HTML! To start playing
 and publishing now, remix the starter example on Glitch:
 
-[![Remix](https://cloud.githubusercontent.com/assets/674727/24572421/688f7fc0-162d-11e7-8a35-b02bc050c043.jpg)](https://glitch.com/~aframe)
+[![Remix][remix-eg1-img]][remix-eg1-link]
 
 ```html
 <html>
   <head>
-    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe/dist/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -136,7 +123,7 @@ and publishing now, remix the starter example on Glitch:
 ```
 
 With A-Frame's [entity-component
-architecture](https://aframe.io/docs/0.7.1/core/), we can drop in community
+architecture][aframe-core-link], we can drop in community
 components from the ecosystem (e.g., ocean, physics) and plug them into our
 objects straight from HTML:
 
@@ -177,11 +164,11 @@ objects straight from HTML:
 
 ### Builds
 
-To use the latest stable build of A-Frame, include [`aframe.min.js`](https://aframe.io/releases/0.7.1/aframe.min.js):
+To use the latest stable build of A-Frame, include [`aframe.min.js`][aframe-latest]:
 
 ```js
 <head>
-  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe/dist/aframe.min.js"></script>
 </head>
 ```
 
@@ -191,17 +178,20 @@ To check out the stable and master builds, see the [`dist/` folder](dist/).
 
 ```sh
 npm install --save aframe
-# Or yarn add aframe
+# Or
+yarn add aframe
 ```
 
 ```js
 require('aframe')  // e.g., with Browserify or Webpack.
+// or
+require('aframe/src') // to rebuild A-Frame
 ```
 
 ## Local Development
 
 ```sh
-git clone https://github.com/aframevr/aframe.git  # Clone the repository.
+git clone --origin github/aframevr https://github.com/aframevr/aframe.git  # Clone the repository.
 cd aframe && npm install  # Install dependencies.
 npm start  # Start the local development server.
 ```
@@ -216,13 +206,14 @@ npm run dist
 
 ## Questions
 
-For questions and support, [ask on StackOverflow](https://stackoverflow.com/questions/ask/?tags=aframe).
+For questions and support, ask on [Slack][aframe-slack-link] or  [StackOverflow][aframe-stackoverflow-link].
 
 ## Stay in Touch
 
-- To hang out with the community, [join the A-Frame Slack](https://aframevr-slack.herokuapp.com).
-- [Follow `A Week of A-Frame` on the A-Frame blog](https://aframe.io/blog).
-- [Follow @aframevr on Twitter](https://twitter.com/aframevr).
+- To hang out with the community, [join the A-Frame Slack][aframe-slack-link].
+- [Follow `A Week of A-Frame` on the A-Frame blog][aframe-blog-link].
+- [Follow @aframevr on Twitter][aframe-twitter-link].
+
 
 ## Contributing
 
@@ -231,3 +222,43 @@ Get involved! Check out the [Contributing Guide](.github/contributing.md) for ho
 ## License
 
 This program is free software and is distributed under an [MIT License](LICENSE).
+
+<!-- A-Frame  -->
+[aframe-cover]: ./examples/assets/img/acover.jpg
+[aframe-site-link]: https://aframe.io
+[aframe-docs-link]: https://aframe.io/docs/
+[aframe-school-link]: https://aframe.io/aframe-school/
+[aframe-slack-link]: https://aframevr-slack.herokuapp.com
+[aframe-blog-link]: https://aframe.io/blog/
+[aframe-examples-link]: https://aframe.io/examples/
+[aframe-core-link]: https://aframe.io/docs/master/core/
+[aframe-latest]: https://cdn.jsdelivr.net/npm/aframe/dist/aframe.min.js
+[aframe-twitter-link]: https://twitter.com/aframevr
+[aframe-stackoverflow-link]: https://stackoverflow.com/questions/ask/?tags=aframe
+
+[aframe-version-img]: https://img.shields.io/npm/v/aframe.svg?style=flat-square
+[aframe-version-link]: https://npmjs.org/package/aframe
+
+[github-issues-img]: https://img.shields.io/github/issues/aframevr/aframe.svg?style=flat-square
+[github-issues-link]: https://github.com/aframevr/aframe/issues
+
+[github-forks-img]: https://img.shields.io/github/forks/aframevr/aframe.svg?style=flat-square
+[github-forks-link]: https://github.com/aframevr/aframe/network
+
+[github-stars-img]: https://img.shields.io/github/stars/aframevr/aframe.svg?style=flat-square
+[github-stars-link]: https://github.com/aframevr/aframe/stargazers
+
+[npm-downloads-img]: https://img.shields.io/npm/dt/aframe.svg?style=flat-square
+[npm-downloads-link]: https://npmjs.org/package/aframe
+
+<!-- codecov -->
+[codecov-img]: https://codecov.io/gh/aframevr/aframe/branch/master/graph/badge.svg?style=flat-square
+[codecov-link]: https://codecov.io/gh/aframevr/aframe
+
+<!-- License -->
+[license-img]: https://img.shields.io/github/license/aframevr/aframe.svg?style=flat-square
+[license-link]: https://github.com/aframevr/aframe/blob/master/LICENSE
+
+<!-- Remix -->
+[remix-eg1-link]:  https://glitch.com/~aframe
+[remix-eg1-img]: https://cloud.githubusercontent.com/assets/674727/24572421/688f7fc0-162d-11e7-8a35-b02bc050c043.jpg
