@@ -1,3 +1,5 @@
+# Contributing Guidelines
+
 [slack]: https://aframevr-slack.herokuapp.com
 [stackoverflow]: http://stackoverflow.com/questions/tagged/aframe
 
@@ -8,12 +10,12 @@ contribute to these related projects:
 - [aframe-inspector](https://github.com/aframevr/aframe-inspector)
 - [aframe-site](https://github.com/aframevr/aframe-site)
 
-# Join the Community on Slack
+## Join the Community on Slack
 
 1. [Invite yourself][slack] to the A-Frame Slack channel.
 2. [Join the discussion](https://aframevr.slack.com)!
 
-# Get Help or Ask a Question
+## Get Help or Ask a Question
 
 If you're not sure how to do something with A-Frame, please post a question
 (and any code you've tried so far) to [Stack Overflow under the 'aframe'
@@ -21,7 +23,7 @@ tag][stackoverflow]. Questions there will automatically create notifications in
 [Slack][slack], and are easier for others to find so new developers can learn
 from your questions too.
 
-# File an Issue
+## File an Issue
 
 1. Search the [issue tracker](https://github.com/aframevr/aframe/issues) for similar issues.
 2. Specify the version of A-Frame in which the bug occurred.
@@ -29,7 +31,7 @@ from your questions too.
 4. Describe the problem in detail (i.e., what happened and what you expected would happen).
 5. If possible, provide a small test case with [CodePen](http://codepen.io), a link to your application, and/or a screenshot. You can fork this [sample pen](http://codepen.io/anon/pen/KVWpbb).
 
-# Contribute Code to A-Frame
+## Contribute Code to A-Frame
 
 [aframe]: https://github.com/aframevr/aframe/
 [easy]: https://github.com/aframevr/aframe/labels/help%20wanted%20%28easy%29
@@ -54,7 +56,38 @@ Check out the [issues labeled *help wanted (easy)*][easy] or [*help wanted
 As per usual with open source, you would agree to license your contributions
 under the [MIT License](LICENSE).
 
-# Share your Work
+### Directory Structure
+
+- `dist` - Builds for both the stable version and the bleeding-edge version, including minified. Generated with `npm run dist`.
+- `docs` - Complete documentation in Markdown. Used to generate the documentation on the [A-Frame Site](https://github.com/aframevr/aframe-site).
+- `examples` - Examples. `index.html` lists all of the examples.
+- `src` - Source code.
+  - `components` - Standard components. They are required via `components/index.js`.
+    - `scene` - Standard components that apply only to the scene.
+  - `constants` - Common constants.
+  - `core` - Core custom elements and API.
+    - `scene` - Scene custom element and modules.
+  - `extras` - Convenience and abstraction layers such as primitives.
+    - `components` - Internal components
+    - `primitives` - Code for registering primitive custom elements.
+      - `primitives` - Standard primitives such as `<a-box>`.
+  - `index.js` - Main file that will be exported to `window.AFRAME`.
+  - `lib` - Integration with third-party modules.
+  - `shaders` - Standard shaders. They are required via `shaders/index.js`.
+  - `style` - Core CSS.
+  - `systems` - Standard systems. They are required via `systems/index.js`.
+  - `utils` - Utility function and modules. They should all be exposed in `utils/index.js` which is exported to `window.AFRAME.utils`.
+- `tests` - Functional and unit tests with Karma, Mocha, Sinon, and Chai.
+- `vendor` - Third-party modules not available via NPM.
+
+### Major Dependencies
+
+- [document-register-element](https://github.com/WebReflection/document-register-element) - Polyfill for the Custom Elements specification.
+- [three.js](https://github.com/mrdoob/three.js) - 3D library.
+- [tween.js](https://github.com/tweenjs/tween.js/) - Animation and interpolation library.
+- [webvr-polyfill](https://github.com/borismus/webvr-polyfill) - Polyfill for the WebVR specification.
+
+## Share your Work
 
 1. Create something awesome like a scene, a component, or a shader.
 2. Publish your work to Github (and GitHub pages) so everyone can learn from your work.
@@ -62,7 +95,7 @@ under the [MIT License](LICENSE).
 4. Let us know about it so we can feature it on our blog: [A Week of A-Frame](https://aframe.io/blog/).
 4. For bonus points, write and publish a case study to explain how you built it.
 
-# Update Documentation
+## Update Documentation
 
 If you catch a typo or error in the documentation, we'd greatly appreciate a
 pull request.
@@ -77,7 +110,7 @@ branches for older versions if necessary.
 You can also do `npm run docs` within the A-Frame project to start a local live
 server for watching and serving documentation.
 
-## Add Glitch Examples to Documentation
+**Add Glitch Examples to Documentation**
 
 We like to have simple and interesting [Glitch](https://glitch.com/~aframe)
 examples listed on relevant documentation pages. Glitch lets people remix/fork
@@ -92,21 +125,21 @@ that might be useful in the documentation, request to add it!
 If a Glitch example needs to be updated for whatever reason, we can remix the
 Glitch and update the `src` URL.
 
-# Help Your Fellow A-Framers
+## Help Your Fellow A-Framers
 
-## On Slack
+**On Slack**
 
 1. [Invite yourself](https://aframevr-slack.herokuapp.com/) to the A-Frame Slack channel.
 2. Help answer questions that people might have and welcome new people.
 3. Redirect or cross-post questions to the [Stack Overflow A-Frame tag][stackoverflow].
 
-## On GitHub
+**On GitHub**
 
 1. Help respond to [newly-filed GitHub issues](https://github.com/aframevr/aframe/issues)
 2. Redirect developers to [Stack Overflow][stackoverflow] if a question is filed rather than an issue.
 3. For extra points, cross-post and answer the question on Stack Overflow after redirecting!
 
-# Curate and Make Efforts Known
+### Curate and Make Efforts Known
 
 Every week, we round up all the cool stuff happening with A-Frame on the
 [blog](https://aframe.io/blog). We collect things to show off in [these GitHub
@@ -118,7 +151,7 @@ repository](https://github.com/aframevr/awesome-aframe) up to date. If you see
 any missing content or things that haven't been synced to the blog, make a pull
 request there.
 
-# Spread the Word
+### Spread the Word
 
 If you want to hold an event and talk about WebVR and A-Frame, check out [the
 presentation kit](https://github.com/aframevr/aframe-presentation-kit).
