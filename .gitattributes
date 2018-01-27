@@ -13,12 +13,11 @@
 *.html text
 *.npmignore text
 *.md text
-.ackrc text
+*.yml text
 .gitattributes text
 .gitignore text
 .jshintrc text
 .nojekyll text
-.travis.yml text
 LICENSE text
 
 # Avoid creation of unnecessary big commit objects
