@@ -220,7 +220,7 @@ For questions and support, [ask on StackOverflow](https://stackoverflow.com/ques
 
 ## Contributing
 
-Get involved! Check out the [Contributing Guide](CONTRIBUTING.md) for how to get started.
+Get involved! Check out the [Contributing Guide](.github/contributing.md) for how to get started.
 
 ## License
 
