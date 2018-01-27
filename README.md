@@ -103,6 +103,12 @@ raycasters, shadows, positional audio, Vive / Touch / Cardboard controls. Get
 even further with community components such as particle systems, physics,
 multiuser, oceans, mountains, speech recognition, or teleportation!
 
+## Top-Level Goals
+
+- **Community:** help people get involved with WebXR in a fun and welcoming environment
+- **Performance:** maintain high framerate with low latency
+- **Ecosystem:** enable discovery and distribution of reusable components
+
 ## Usage
 
 ### Example
